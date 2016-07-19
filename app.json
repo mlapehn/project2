@@ -1,0 +1,7 @@
+{
+  "name": "Project 2",
+  "description": "Project 2",
+  "image": "heroku/ruby",
+  "repository": "https://github.com/mlapehn/project2",
+  "addons": [ "heroku-postgresql" ]
+}
