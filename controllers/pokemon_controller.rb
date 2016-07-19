@@ -21,6 +21,22 @@ class Pokemonevolve < Sinatra::Base
     if @pokemon.save
       redirect("/pokemon/#{@pokemon.id}")
     else
+
+      # can still evolve = candy left > evolve cost
+
+      # while can still evolve 
+        # evolve cost or= pass in cost
+        # candy = candy - evolve cost
+          # Some code goes here
+        # evolve cost is = 12,25,50,100
+
+
+        # other method  (Don't forget -1 pokemon +1 candy)
+        # Candy/Evolve cost = initial evolve
+        # Candy - (initial evolve * evolve cost) = remander
+        # ((remander + #of pokemon)/evolve cost) = extra evolves
+        # extra evolves + initial evolve = total
+
       erb(:"pokemon/new")
     end
   end
