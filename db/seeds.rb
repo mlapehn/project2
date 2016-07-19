@@ -1,7 +1,7 @@
 # Change to pokemon
 require './models/pokemon'
 
-Pokemon.create({
+Pokemonmodel.create({
     name: 'Pidgey',
     candy: '62', 
   })
