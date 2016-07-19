@@ -1,4 +1,4 @@
-class Pokemon < Sinatra::Base
+class Pokemonevolve < Sinatra::Base
   
   set :method_override, true
 

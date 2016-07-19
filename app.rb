@@ -1,5 +1,5 @@
 
-class Pokemon < Sinatra::Base
+class Pokemonevolve < Sinatra::Base
 	# General route actions
 	get '/' do
 		erb :home

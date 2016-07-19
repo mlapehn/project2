@@ -1,2 +1,2 @@
-class Pokemonmodel < ActiveRecord::Base
+class Pokemon < ActiveRecord::Base
 end

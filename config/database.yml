@@ -1,5 +1,5 @@
 development:
   adapter: postgresql
-  database: tunr_heroku_development
+  database: project2_development
 production:
   url: <%= ENV['DATABASE_URL'] %>

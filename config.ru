@@ -13,4 +13,4 @@ require './app'
 require './controllers/pokemon_controller'
 
 # Need to update
-run Pokemon
+run Pokemonevolve
