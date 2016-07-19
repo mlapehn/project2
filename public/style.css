@@ -58,59 +58,10 @@ main, footer {
   margin: 40px auto;
 }
 
-main .artists {
-  margin: 20px 0;
-}
 
 main ul {
   list-style-type: none;
   padding: 0;
-}
-
-.artists .row {
-  height: 100px;
-}
-
-.songs .row {
-  height: 30px;
-}
-
-.artists .row, 
-.songs .row {
-  clear: both;
-  background: #fff;
-  padding: 10px;
-  margin: 0 0 10px;
-}
-
-.artists .row img {
-  float: left;
-  max-height: 100px;
-}
-
-.artists .row ul {
-  float: left;
-  margin: 0 0 0 10px;
-}
-
-.artists .row h2, 
-.artists .row h2 a {
-  font-size: 20px;
-  margin: 0 0 10px;
-  text-decoration: none;
-}
-
-.songs .row ul li a,
-.songs .row ul li button {
-.artists .row ul li a,
-.artists .row ul li button {
-  color: black;
-  background:none!important;
-  border:none; 
-  padding:0!important;
-  font: inherit;
-  text-decoration: underline;
-  cursor: pointer;
 }
 
 input, select {
