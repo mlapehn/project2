@@ -58,12 +58,67 @@ main, footer {
   margin: 40px auto;
 }
 
+<<<<<<< HEAD
+=======
+main .artists {
+  margin: 20px 0;
+}
+>>>>>>> 9bc239b07db076ab5837dfb847b6db2885e75361
 
 main ul {
   list-style-type: none;
   padding: 0;
 }
 
+<<<<<<< HEAD
+=======
+.artists .row {
+  height: 100px;
+}
+
+.songs .row {
+  height: 30px;
+}
+
+.artists .row, 
+.songs .row {
+  clear: both;
+  background: #fff;
+  padding: 10px;
+  margin: 0 0 10px;
+}
+
+.artists .row img {
+  float: left;
+  max-height: 100px;
+}
+
+.artists .row ul {
+  float: left;
+  margin: 0 0 0 10px;
+}
+
+.artists .row h2, 
+.artists .row h2 a {
+  font-size: 20px;
+  margin: 0 0 10px;
+  text-decoration: none;
+}
+
+.songs .row ul li a,
+.songs .row ul li button {
+.artists .row ul li a,
+.artists .row ul li button {
+  color: black;
+  background:none!important;
+  border:none; 
+  padding:0!important;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+>>>>>>> 9bc239b07db076ab5837dfb847b6db2885e75361
 input, select {
   display: block;
   line-height: 2;
