@@ -8,7 +8,7 @@ class Pokemonevolve < Sinatra::Base
   # RESTful Artist Controller Actions
   # index
   get '/pokemon' do
-    @pokemon = Pokemon.all
+    @pokemons = Pokemon.all
     erb(:"pokemon/index")
   end
 
@@ -29,7 +29,7 @@ class Pokemonevolve < Sinatra::Base
     @pokemon = Pokemon.new(params[:pokemon])
     p params[:pokemon]
     Pokemon.create(params[:pokemon])
-    redirect to('/pokemon/new')
+    redirect to('/pokemon')
 
         # other method  (Don't forget -1 pokemon +1 candy)
         # Candy/Evolve cost = initial evolve
@@ -61,10 +61,10 @@ class Pokemonevolve < Sinatra::Base
   end
 
   # delete
-  delete '/pokemon/:id' do
+  delete '/pokemons/:id' do
     @pokemon = Pokemon.find(params[:id])
     if @pokemon.destroy
-      redirect('/pokemon')
+      redirect('/pokemons')
     else
       redirect("/pokemon/#{@pokemon.id}")
     end

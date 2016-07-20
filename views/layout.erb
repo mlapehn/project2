@@ -27,61 +27,11 @@
         </div>
       </nav>
 
-    <h1>Pokemon Evolve Counter</h1>
+    <h1 id="h1" class="h1">Pokemon Evolve Counter</h1>
 
     <!-- jQuery first, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
   </body>
-      <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-        Create New Pokemon
-      </button>
-
-        <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Evolve Counter</h4>
-          </div>
-          <div class="modal-body">
-            <!-- Make sure to change setup to post -->
-            <form method="post" action="/pokemon">
-              <fieldset class="form-group">
-                <label for="pokemon[name]">Name of Pokemon</label>
-                <input name="pokemon[name]" type="text" class="form-control" id="name" placeholder="Pidgey">
-                <small class="text-muted">Name your pokemon!</small>
-              </fieldset>
-              <fieldset class="form-group">
-                <label for="pokemon[candy]">Number of Candies</label>
-                <input name="pokemon[candy]" type="number" class="form-control" id="candy" placeholder="62">
-                <small class="text-muted">Enter the number of candies you have for the specific pokemon you named!</small>
-              </fieldset>
-              <fieldset class="form-group">
-                <label for="pokemon[pokemoncount]">Number of Pokemon</label>
-                <input name="pokemon[pokemoncount]" type="number" class="form-control" id="pokemoncount" placeholder="7">
-                <small class="text-muted">Enter the amount of pokemon you have for the specific pokemon you named!</small>
-              </fieldset>
-              <fieldset class="form-group">
-                <label for="pokemon[evolve]">Evolve Cost</label>
-                <select name="pokemon[evolve]" class="form-control" id="exampleSelect1">
-                <!-- These need values for the numbers -->
-                  <option value="12">12</option>
-                  <option value="25">25</option>
-                  <option value="50">50</option>
-                  <option value="100">100</option>
-                </select>
-              </fieldset>
-               <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <input type="submit" class="btn btn-primary" value="Create"></input>
-          </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  <%= yield %>
+<%= yield %>
 </html>

@@ -1,3 +1,7 @@
+.h1 {
+	text-align: center;
+}
+
 .selector-for-some-widget {
   -webkit-box-sizing: content-box;
      -moz-box-sizing: content-box;
