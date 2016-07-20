@@ -1,5 +1,6 @@
 class Pokemon < ActiveRecord::Base
-	# def evolve_cost[
+	# This needs to be set for the drop down menu
+	#evolve_cost = [
 	# 	["12"],
 	# 	["25"],
 	# 	["50"],

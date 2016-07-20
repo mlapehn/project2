@@ -2,6 +2,9 @@ class Pokemonevolve < Sinatra::Base
   
   set :method_override, true
 
+  # Variables for create method
+
+
   # RESTful Artist Controller Actions
   # index
   get '/pokemon' do
@@ -21,15 +24,9 @@ class Pokemonevolve < Sinatra::Base
     if @pokemon.save
       redirect("/pokemon/#{@pokemon.id}")
     else
+      # This is where I am stuck
 
-      # can still evolve = candy left > evolve cost
-
-      # while can still evolve 
-        # evolve cost or= pass in cost
-        # candy = candy - evolve cost
-          # Some code goes here
-        # evolve cost is = 12,25,50,100
-
+      # I can't figure out how to write the following method
 
         # other method  (Don't forget -1 pokemon +1 candy)
         # Candy/Evolve cost = initial evolve
