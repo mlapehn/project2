@@ -31,11 +31,14 @@ class Pokemonevolve < Sinatra::Base
     Pokemon.create(params[:pokemon])
     redirect to('/pokemon')
 
-        # other method  (Don't forget -1 pokemon +1 candy)
+    # ***********************************************************************
+      # I need to write a method that does the math                         
+      # 
         # Candy/Evolve cost = initial evolve
         # Candy - (initial evolve * evolve cost) = remander
         # ((remander + #of pokemon)/evolve cost) = extra evolves
         # extra evolves + initial evolve = total
+    #  ***********************************************************************
   end
 
   # show
@@ -50,6 +53,9 @@ class Pokemonevolve < Sinatra::Base
     erb(:"pokemon/edit")
   end
 
+  # ***********************************************
+  # I can't get my update or delete routes to work
+  # ***********************************************
   # update
   put '/pokemon/:id' do
     @pokemon = Pokemon.find(params[:id])
