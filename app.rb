@@ -9,4 +9,12 @@ class Pokemonevolve < Sinatra::Base
 		erb :edit
 	end
 
+	# get '/home.erb' do
+	# 	erb :home
+	# end
+
+	# get '/new.erb' do
+	# 	erb :new
+	# end
+
 end
