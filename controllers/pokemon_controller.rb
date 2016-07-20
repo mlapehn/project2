@@ -12,6 +12,12 @@ class Pokemonevolve < Sinatra::Base
     erb(:"pokemon/index")
   end
 
+  # API
+  get '/api' do
+    pokemon = Pokemon.all.to_json
+    pokemon
+  end
+
   # new
   get '/pokemon/new' do
     @pokemon = Pokemon.new
@@ -21,21 +27,15 @@ class Pokemonevolve < Sinatra::Base
   # create
   post '/pokemon' do
     @pokemon = Pokemon.new(params[:pokemon])
-    if @pokemon.save
-      redirect("/pokemon/#{@pokemon.id}")
-    else
-      # This is where I am stuck
-
-      # I can't figure out how to write the following method
+    p params[:pokemon]
+    Pokemon.create(params[:pokemon])
+    redirect to('/pokemon/new')
 
         # other method  (Don't forget -1 pokemon +1 candy)
         # Candy/Evolve cost = initial evolve
         # Candy - (initial evolve * evolve cost) = remander
         # ((remander + #of pokemon)/evolve cost) = extra evolves
         # extra evolves + initial evolve = total
-
-      erb(:"pokemon/new")
-    end
   end
 
   # show
