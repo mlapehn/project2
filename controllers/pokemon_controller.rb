@@ -50,27 +50,24 @@ class Pokemonevolve < Sinatra::Base
   # edit
   get '/pokemon/:id/edit' do
     @pokemon = Pokemon.find(params[:id])
-    erb(:"pokemon/edit")
+    erb(:"update")
   end
 
-  # ***********************************************
-  # I can't get my update or delete routes to work
-  # ***********************************************
   # update
   put '/pokemon/:id' do
     @pokemon = Pokemon.find(params[:id])
     if @pokemon.update_attributes(params[:pokemon])
-      redirect("/pokemon/#{@pokemon.id}")
+      redirect("/pokemon")
     else
       erb(:"pokemon/edit")
     end
   end
 
   # delete
-  delete '/pokemons/:id' do
+  delete '/pokemon/:id' do
     @pokemon = Pokemon.find(params[:id])
     if @pokemon.destroy
-      redirect('/pokemons')
+      redirect('/pokemon')
     else
       redirect("/pokemon/#{@pokemon.id}")
     end
