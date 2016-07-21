@@ -1,23 +1,21 @@
 <% @pokemons.each do |pokemon| %>
 <div>
-	<h2>Name: <%= pokemon.name %></h2>
-	<h2>Candy: <%= pokemon.candy %></h2>
-	<h2>Evolve: <%= pokemon.evolve %></h2>
-	<h2>Pokemon #: <%= pokemon.pokemoncount %></h2>
+	<h1 class="h1">Name: <%= pokemon.name %></h1>
+	<h1 class="h1">Candy: <%= pokemon.candy %></h1>
+	<h1 class="h1">Evolve: <%= pokemon.evolve %></h1>
+	<h1 class="h1">Pokemon #: <%= pokemon.pokemoncount %></h1>
 </div>
 <!-- Delete button -->
 <!-- Delete method -->
 	<form action="/pokemon/<%=pokemon.id%>" method="post">
 	  <div style="margin:0;padding:0">
 	    <input name="_method" type="hidden" value="DELETE" />
-	    <button id="singlebutton" name="singlebutton" class="btn btn-default">Remove</button>
+	    <button id="singlebutton" name="singlebutton" class="singlebutton">Remove</button>
 	  </div>
 	</form>
-
-<br>
 	<form action="/pokemon/<%=pokemon.id%>/edit" method="GET">
 	  <div style="margin:0;padding:0">
-	   <button>Update</button>
+	   <button class="singlebutton">Update </button>
 	  </div>
 	</form>
 
