@@ -3,7 +3,10 @@ class Pokemonevolve < Sinatra::Base
   set :method_override, true
 
   # Variables for create method
-
+  # @pokemon.name = pn
+  # @pokemon.candy = candy
+  # @pokemon.evolve = evolve
+  # @pokemon.pokemoncount = pokemoncount
 
   # RESTful Artist Controller Actions
   # index
@@ -32,12 +35,20 @@ class Pokemonevolve < Sinatra::Base
     redirect to('/pokemon')
 
     # ***********************************************************************
-      # I need to write a method that does the math                         
-      # 
         # Candy/Evolve cost = initial evolve
-        # Candy - (initial evolve * evolve cost) = remander
-        # ((remander + #of pokemon)/evolve cost) = extra evolves
-        # extra evolves + initial evolve = total
+    # (candy/evolve) = initial_evolve
+    # initial_evolve = initial
+
+    # Candy - (initial evolve * evolve cost) = remander
+    # (candy - (initial * )) = remander
+
+    # ((remander + #of pokemon)/evolve cost) = extra evolves
+    # ((remander + pokemoncount)/evolve) = extra_evolves
+    # extra_evolves = extra
+
+    # extra evolves + initial evolve = total
+    # (extra + initial) = total
+    # @total = total
     #  ***********************************************************************
   end
 
