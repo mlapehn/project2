@@ -5,22 +5,26 @@
 
 body {
 	background-image: url("../pictures/gameboy.png");
+  position: relative;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
+	background-size: contain;
+  position: cover;
+  position: center;
+
 }
 
 .h1,.h2 {
-	color: black;
+	color: white;
 }
 .title {
 	text-align: center;
-	color: black;
+	color: white;
 }
 
 .singlebutton{
 	background-color: green;
 	color: white;
+
 }
 
 .selector-for-some-widget {
@@ -430,6 +434,7 @@ div[class*=box] {
 	text-align: center;
 	width: 250px;
 	cursor: pointer;
+  padding-bottom: 60px;
 }
 
 /* 

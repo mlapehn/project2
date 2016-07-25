@@ -9,6 +9,7 @@ Technologies Used:
 - Ruby & ActiveRecord
 - Sinatra
 - PostgresSQL
-- Heroku (hosting)<br>
+- Heroku (hosting)
+<br>
 https://trello.com/b/h06eTQYr/project-2 <br>
 ![Alt text](/Pokemon.png?raw=true "Optional Title")
