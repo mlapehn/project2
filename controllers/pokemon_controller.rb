@@ -2,10 +2,10 @@ class Pokemonevolve < Sinatra::Base
   
   set :method_override, true
 
-  # Variables for create method
-  # @pokemon.candy = candy
-  # @pokemon.evolve = evolve
-  # @pokemon.pokemoncount = pokemoncount
+  Variables for create method
+  @pokemon.candy = candy
+  @pokemon.evolve = evolve_cost
+  @pokemon.pokemoncount = pokemon_count
 
   # RESTful Pokemon Controller Actions
   # index
@@ -34,6 +34,13 @@ class Pokemonevolve < Sinatra::Base
     redirect to('/pokemon')
 
     # ***********************************************************************
+    first_evolve = (candy/evolve_cost)
+
+    remainder = candy - (first_evolve * evolve_cost)
+
+    extra_evolves = ((remainder + pokemon_count)/evolve_cost)
+
+    total = extra_evolves + first_evolve
     # initial_evolve = initial
     # (candy/evolve) = initial_evolve
 
